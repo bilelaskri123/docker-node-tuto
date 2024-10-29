@@ -1,0 +1,13 @@
+version: "3"
+services:
+  node-app:
+    container_name: express-node-app-container
+    build: .
+    image: express-node-app
+    volumes:
+      - ./src:/app/src:ro
+    ports:
+      - "4000:4000"
+    environment:
+      - PORT=4000
+      - NODE_ENV=production
