@@ -14,3 +14,9 @@
 
 9- docker compose 
 10- Environment variables
+11- docker environments(dev, prod, testing)
+12- multi-stage Dockerfile (using args to check the environment before building image)
+
+
+
+PS: YAML syntax and bash scripting

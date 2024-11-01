@@ -1,4 +1,7 @@
 /node_modules
 Dockerfile
+docker-compose.yml
 .env
 plan.txt
+docker-compose*
+README.md
