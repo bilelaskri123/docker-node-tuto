@@ -16,7 +16,12 @@
 10- Environment variables
 11- docker environments(dev, prod, testing)
 12- multi-stage Dockerfile (using args to check the environment before building image)
+    ARG NODE_ENV
+    RUN if [ "${NODE_ENV}" = "production" ]; \
+        then npm install --only=production; \
+        else npm install; \
+        fi
 
-
+13- docker with mongodb and nodejs
 
 PS: YAML syntax and bash scripting
