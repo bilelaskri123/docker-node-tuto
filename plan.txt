@@ -23,5 +23,8 @@
         fi
 
 13- docker with mongodb and nodejs
+14- docker with mongodb
+15- docker with redis
+16- docker with nginx
 
 PS: YAML syntax and bash scripting
