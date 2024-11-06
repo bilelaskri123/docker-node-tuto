@@ -26,5 +26,19 @@
 14- docker with mongodb
 15- docker with redis
 16- docker with nginx
+17- docker with postgreSQL
+18- docker with laravel
+19- setup docker on AWS EC2
+20- deploy application on AWS
+21- push image to dockerhub
+
+
+
+22- load balancing with nginx
+23- AUtomate docker
+
+
+
 
 PS: YAML syntax and bash scripting
+wardia1001: 10.20.81.30

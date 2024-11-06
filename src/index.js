@@ -1,6 +1,23 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const redis = require("redis");
+// const { Client } = require("pg");
+
+// connect to postgres db
+// const DB_USER = "root";
+// const DB_PASSWORD = "example";
+// const DB_PORT = 5432;
+// const DB_HOST = "postgres";
+
+// const URI = `postgresql://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}`;
+// const client = new Client({
+//   connectionString: URI,
+// });
+
+// client
+//   .connect()
+//   .then(() => console.log("connected to postgres db"))
+//   .catch((error) => console.error("error connect to postgres db: ", error));
 
 // init app
 const PORT = process.env.PORT || 4000;
@@ -16,7 +33,7 @@ redisClient.on("error", (error) => console.log("redis client error: ", error));
 redisClient.on("connect", () => console.log("redis client connected"));
 redisClient.connect();
 
-// connect to db
+// connect to mongodb
 const DB_USER = "root";
 const DB_PASSWORD = "example";
 const DB_PORT = 27017;
