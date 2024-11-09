@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const redis = require("redis");
+const os = require("node:os");
 // const { Client } = require("pg");
 
 // connect to postgres db
@@ -50,8 +51,9 @@ mongoose
   });
 
 app.get("/", async (req, res) => {
+  console.log(`Os IP address: ${os.hostname()}`);
   await redisClient.set("greeting", "hello from redis", "EX", (ttl = 60));
-  res.status(200).send("<h1>Hello Docker from container</h1>");
+  res.status(200).send("<h1>Hello Docker using docker swarm</h1>");
 });
 
 app.get("/greeting", async (req, res) => {

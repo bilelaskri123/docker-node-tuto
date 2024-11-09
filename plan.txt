@@ -31,14 +31,18 @@
 19- setup docker on AWS EC2
 20- deploy application on AWS
 21- push image to dockerhub
-
-
-
 22- load balancing with nginx
-23- AUtomate docker
-
-
-
+23- Automate docker (using watchtower)
+24- How CI/CD works
+25- Docker orchestration
+    - deploy
+    - scaling
+    - networking
+    - errors
+    - updates (rolling update)
+26- docker swarm
+    - node (worker node and master node)
+    - stack
+27- Rolling update
 
 PS: YAML syntax and bash scripting
-wardia1001: 10.20.81.30
