@@ -1,0 +1,28 @@
+* Image: An image is a read-only template with instructions for creating a docker container. you may build,
+an image which is based on ubuntu image or SQL Server.
+
+* Container: A container is a runnable instance of an image. You can create, start, stop, move or delete a container
+using the docker API or CLI
+
+* Registry: A docker registry stores docker images. Docker Hub is a public registry that anyone can use, 
+and docker is configured to look for images on docker hub by default. You can even run your own private registry
+
+*Client:  The docker client is the primary way that many docker users interact with docker. When you use commands 
+such as  docker run, the client sends these commands to dockerd, which carries them out. The docker command 
+uses the Docker API
+
+* Docker daemon: The docker daemon listens for Docker API requests and manages Docker objects such as images,
+containers, networks and volumes.
+
+* Namespaces: Docker uses a technology called Namespaces to provide the isolated workspace called the container.
+when you run a container, docker creates a set of Namespaces for that container. these namespaces provide a layer of
+isolation. Each aspect of a container runs in a separate namespace and its access is limited to that namespace
+
+****** best practices to optimizing Docker images ******
+1/ Using distroless/minimal base images
+2/ multistage builds
+3/ minimizing the number of layers
+4/ understanding caching
+5/ using dockerignore
+6/ keeping application data elsewhere
+

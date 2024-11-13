@@ -1,0 +1,66 @@
+# basic YAML syntax
+# Maps/Dictionaries (YAML calls it mapping)
+# the content of a mapping node is an unordered set of key/value node pairs, wuth th restriction that each of the keys
+# is unique. YAML places no further restrictions on the nodes.
+
+# Arrays/Lists (YAML calls them sequences)
+# the content of a sequence node is an ordered series of zero or more nodes. In particular, a sequence may contain
+# the smae node more than once. it could even contain itself
+
+#Literals (Strings, numbers, boolean, etc)
+# the content of a scaler node is an opaque datum that can be presented as a series of zero or more Unicode characters
+
+# key: value [mapping]
+company: myCompany
+
+# key: value is an array [sequence]
+domain:
+  - devops
+  - devsecops
+tutorial:
+  - yaml:
+      name: "YAML Ain't Markup Language" # string [literal]
+      type: awesome # string [literal]
+      born: 2001 # number [literal]
+  - json:
+      name: Javascript Object Notation
+      type: great
+      born: 2001
+  - xml:
+      name: Extensible Markup Language
+      type: good
+      born: 1996
+author: bilelaskri
+published: true
+
+# Advanced YAML syntax
+# A single YAML file can have more than one document.
+# Each document can be interpreted as a separate YAML file which means multiple documents can contain the same
+# or duplicate keys which are not allowed in the same document 
+# A YAML file with multiple documents would look like this, where each new document is indicated by ---.
+
+---
+# document 1
+codeName: YAML
+name: YAML ain't markup language
+release: 2001
+---
+# document 2
+uses:
+  - configuration language
+  - data persistence
+  - internet messaging
+  - cross-language data sharing
+---
+# document 3
+company: myCompany
+domain:
+  - devops
+  - devsecops
+tutorial:
+  - name: yaml
+  - type: awesome
+  - rank: 1
+  - born: 2001
+author: bilelaskri
+published: true
